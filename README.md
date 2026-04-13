@@ -60,24 +60,5 @@ spotify-clone/
 
 ---
 
-## 🌐 Hosting
-
-Deploy easily with:
-- **GitHub Pages** — Push to `main` branch, enable Pages in repo settings
-- **Netlify** — Drag & drop the `spotify-clone/` folder
-- **Vercel** — `vercel --prod` from the project directory
-
----
-
-## 📋 Evaluation Criteria Coverage
-
-| Criteria              | Implementation                                     |
-|-----------------------|----------------------------------------------------|
-| Accuracy (70%)        | Close layout match with Spotify, responsive grid   |
-| Code Quality (15%)    | Semantic HTML, modular CSS, clean JS, BEM-adjacent |
-| Problem Solving (10%) | Accessible accordion, observer-based animations    |
-| Creative Liberty (5%) | Floating player badges, blob background, sound waves CTA |
-
----
 
 Built for Sprint Internship — Web Development Project 1
