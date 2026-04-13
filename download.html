@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Download – Soundwave</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/variables.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/animations.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+    <style>
+      .page-hero { padding-top: calc(var(--navbar-height) + var(--space-4xl)); padding-bottom: var(--space-4xl); text-align: center; background: linear-gradient(180deg, #0d1120 0%, var(--color-bg-primary) 100%); }
+      .page-hero-title { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900; margin-bottom: var(--space-lg); }
+      .download-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--space-xl); }
+      .download-card { background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: var(--space-2xl); text-align: center; transition: transform var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base); }
+      .download-card:hover { transform: translateY(-6px); border-color: var(--color-green); box-shadow: var(--shadow-green); }
+      .platform-icon { font-size: 3.5rem; margin-bottom: var(--space-lg); }
+      .platform-name { font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; margin-bottom: var(--space-sm); }
+      .platform-desc { font-size: 0.875rem; color: var(--color-text-secondary); margin-bottom: var(--space-xl); line-height: 1.6; }
+      .platform-version { font-size: 0.75rem; color: var(--color-text-muted); margin-top: var(--space-sm); }
+      .qr-section { text-align: center; background: var(--color-bg-secondary); padding: var(--space-4xl) 0; }
+      .qr-box { display: inline-flex; flex-direction: column; align-items: center; gap: var(--space-lg); }
+      .qr-placeholder { width: 140px; height: 140px; background: white; border-radius: var(--radius-lg); display: grid; grid-template-columns: repeat(7, 1fr); grid-template-rows: repeat(7, 1fr); gap: 3px; padding: 12px; }
+      .qr-cell { background: #121212; border-radius: 2px; }
+      .qr-cell.white { background: white; }
+    </style>
+  </head>
+  <body>
+
+    <header class="navbar" id="navbar">
+      <nav class="nav-container">
+        <a href="../index.html" class="nav-logo">
+          <svg class="logo-icon" viewBox="0 0 32 32" fill="none">
+            <circle cx="16" cy="16" r="16" fill="#1DB954"/>
+            <rect x="9" y="11" width="3" height="10" rx="1.5" fill="white"/>
+            <rect x="14.5" y="8" width="3" height="16" rx="1.5" fill="white"/>
+            <rect x="20" y="13" width="3" height="8" rx="1.5" fill="white"/>
+          </svg>
+          <span class="logo-text">Soundwave</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="premium.html" class="nav-link">Premium</a></li>
+          <li><a href="support.html" class="nav-link">Support</a></li>
+          <li><a href="download.html" class="nav-link" style="color:white;">Download</a></li>
+          <li class="nav-divider"></li>
+          <li><a href="#" class="nav-link">Sign Up</a></li>
+          <li><a href="#" class="btn btn-primary btn-sm">Log In</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+      <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <ul>
+          <li><a href="premium.html" class="mobile-link">Premium</a></li>
+          <li><a href="support.html" class="mobile-link">Support</a></li>
+          <li><a href="download.html" class="mobile-link">Download</a></li>
+          <li><a href="#" class="mobile-link">Sign Up</a></li>
+          <li><a href="#" class="btn btn-primary btn-full">Log In</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <p class="section-eyebrow fade-up">Get the App</p>
+          <h1 class="page-hero-title fade-up delay-1">
+            Music on <span class="text-green">every</span> device.
+          </h1>
+          <p class="fade-up delay-2" style="color:var(--color-text-secondary); font-size:1.1rem; max-width:480px; margin-inline:auto; margin-bottom:var(--space-2xl);">Download Soundwave for free on any platform and take your music everywhere.</p>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="download-grid">
+            <article class="download-card fade-up delay-1">
+              <div class="platform-icon">🪟</div>
+              <h2 class="platform-name">Windows</h2>
+              <p class="platform-desc">Full-featured desktop app for Windows 10 and above. Background play, system tray, keyboard shortcuts.</p>
+              <a href="#" class="btn btn-primary btn-full">Download for Windows</a>
+              <p class="platform-version">Version 1.2.24 • 64-bit • 95 MB</p>
+            </article>
+
+            <article class="download-card fade-up delay-2">
+              <div class="platform-icon">🍎</div>
+              <h2 class="platform-name">macOS</h2>
+              <p class="platform-desc">Native Apple Silicon and Intel support. Integrates with macOS media controls and AirPlay.</p>
+              <a href="#" class="btn btn-primary btn-full">Download for Mac</a>
+              <p class="platform-version">Version 1.2.24 • Universal • 88 MB</p>
+            </article>
+
+            <article class="download-card fade-up delay-3">
+              <div class="platform-icon">🐧</div>
+              <h2 class="platform-name">Linux</h2>
+              <p class="platform-desc">Available as a .deb, .rpm, and Snap package. Community supported with regular updates.</p>
+              <a href="#" class="btn btn-outline btn-full">Download for Linux</a>
+              <p class="platform-version">Version 1.2.24 • Snap / .deb / .rpm</p>
+            </article>
+
+            <article class="download-card fade-up delay-1">
+              <div class="platform-icon">📱</div>
+              <h2 class="platform-name">iPhone & iPad</h2>
+              <p class="platform-desc">CarPlay support, Siri integration, and offline downloads for the road.</p>
+              <a href="#" class="btn btn-primary btn-full">App Store</a>
+              <p class="platform-version">iOS 15+ required • Free</p>
+            </article>
+
+            <article class="download-card fade-up delay-2">
+              <div class="platform-icon">🤖</div>
+              <h2 class="platform-name">Android</h2>
+              <p class="platform-desc">Android Auto, widget support, and seamless Wear OS integration.</p>
+              <a href="#" class="btn btn-primary btn-full">Google Play</a>
+              <p class="platform-version">Android 8.0+ required • Free</p>
+            </article>
+
+            <article class="download-card fade-up delay-3">
+              <div class="platform-icon">🌐</div>
+              <h2 class="platform-name">Web Player</h2>
+              <p class="platform-desc">No download needed. Play directly in your browser — Chrome, Firefox, Safari, Edge.</p>
+              <a href="#" class="btn btn-outline btn-full">Open Web Player</a>
+              <p class="platform-version">No installation required</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="qr-section">
+        <div class="container">
+          <div class="qr-box fade-up">
+            <p class="section-eyebrow">Scan to Download</p>
+            <h2 class="section-title" style="font-size:1.75rem;">Get the mobile app instantly</h2>
+            <div class="qr-placeholder" aria-label="QR code to download Soundwave mobile app" role="img">
+              <!-- Decorative QR pattern -->
+              <div class="qr-cell"></div><div class="qr-cell"></div><div class="qr-cell"></div><div class="qr-cell white"></div><div class="qr-cell"></div><div class="qr-cell"></div><div class="qr-cell"></div>
+              <div class="qr-cell"></div><div class="qr-cell white"></div><div class="qr-cell"></div><div class="qr-cell"></div><div class="qr-cell"></div><div class="qr-cell white"></div><div class="qr-cell"></div>
+              <div class="qr-cell"></div><div class="qr-cell"></div><div class="qr-cell white"></div><div class="qr-cell"></div><div class="qr-cell white"></div><div class="qr-cell"></div><div class="qr-cell"></div>
+              <div class="qr-cell white"></div><div class="qr-cell"></div><div class="qr-cell"></div><div class="qr-cell white"></div><div class="qr-cell"></div><div class="qr-cell"></div><div class="qr-cell white"></div>
+              <div class="qr-cell"></div><div class="qr-cell"></div><div class="qr-cell white"></div><div class="qr-cell"></div><div class="qr-cell white"></div><div class="qr-cell"></div><div class="qr-cell"></div>
+              <div class="qr-cell"></div><div class="qr-cell white"></div><div class="qr-cell"></div><div class="qr-cell"></div><div class="qr-cell"></div><div class="qr-cell white"></div><div class="qr-cell"></div>
+              <div class="qr-cell"></div><div class="qr-cell"></div><div class="qr-cell"></div><div class="qr-cell white"></div><div class="qr-cell"></div><div class="qr-cell"></div><div class="qr-cell"></div>
+            </div>
+            <p style="color:var(--color-text-secondary); font-size:0.9rem;">Point your camera at the QR code</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-bottom" style="border-top:none; padding-top:0;">
+          <p class="footer-copy">&copy; 2024 Soundwave. <a href="../index.html" style="color:var(--color-green);">Back to Home</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/navbar.js"></script>
+    <script src="../js/animations.js"></script>
+  </body>
+</html>

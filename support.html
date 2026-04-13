@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Support – Soundwave</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/variables.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/animations.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+    <style>
+      .page-hero { padding-top: calc(var(--navbar-height) + var(--space-4xl)); padding-bottom: var(--space-3xl); text-align: center; background: linear-gradient(180deg, #1a1a2e 0%, var(--color-bg-primary) 100%); }
+      .page-hero-title { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900; margin-bottom: var(--space-lg); }
+      .search-box { display: flex; gap: var(--space-sm); max-width: 500px; margin-inline: auto; }
+      .search-input { flex: 1; padding: 0.875rem 1.25rem; background: var(--color-bg-elevated); border: 1px solid var(--color-border); border-radius: var(--radius-full); color: var(--color-text-primary); font-size: 0.95rem; outline: none; transition: border-color var(--transition-fast); }
+      .search-input:focus { border-color: var(--color-green); }
+      .search-input::placeholder { color: var(--color-text-muted); }
+      .faq-list { max-width: 700px; margin-inline: auto; display: flex; flex-direction: column; gap: var(--space-md); }
+      .faq-item { background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; }
+      .faq-question { display: flex; justify-content: space-between; align-items: center; padding: var(--space-lg) var(--space-xl); cursor: pointer; font-weight: 600; font-size: 0.95rem; transition: color var(--transition-fast); }
+      .faq-question:hover { color: var(--color-green); }
+      .faq-toggle { font-size: 1.2rem; color: var(--color-green); flex-shrink: 0; transition: transform var(--transition-base); }
+      .faq-item.open .faq-toggle { transform: rotate(45deg); }
+      .faq-answer { max-height: 0; overflow: hidden; transition: max-height var(--transition-slow), padding var(--transition-base); }
+      .faq-item.open .faq-answer { max-height: 200px; }
+      .faq-answer p { padding: 0 var(--space-xl) var(--space-lg); color: var(--color-text-secondary); font-size: 0.9rem; line-height: 1.7; }
+      .help-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-xl); margin-bottom: var(--space-4xl); }
+      .help-card { background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-xl); text-align: center; transition: border-color var(--transition-fast), transform var(--transition-fast); }
+      .help-card:hover { border-color: var(--color-green); transform: translateY(-3px); }
+      .help-icon { font-size: 2rem; margin-bottom: var(--space-md); }
+      .help-card h3 { font-family: var(--font-display); font-weight: 700; margin-bottom: var(--space-sm); }
+      .help-card p { font-size: 0.875rem; color: var(--color-text-secondary); }
+      @media (max-width: 768px) { .help-cards { grid-template-columns: 1fr; } .search-box { flex-direction: column; } }
+    </style>
+  </head>
+  <body>
+
+    <header class="navbar" id="navbar">
+      <nav class="nav-container">
+        <a href="../index.html" class="nav-logo">
+          <svg class="logo-icon" viewBox="0 0 32 32" fill="none">
+            <circle cx="16" cy="16" r="16" fill="#1DB954"/>
+            <rect x="9" y="11" width="3" height="10" rx="1.5" fill="white"/>
+            <rect x="14.5" y="8" width="3" height="16" rx="1.5" fill="white"/>
+            <rect x="20" y="13" width="3" height="8" rx="1.5" fill="white"/>
+          </svg>
+          <span class="logo-text">Soundwave</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="premium.html" class="nav-link">Premium</a></li>
+          <li><a href="support.html" class="nav-link" style="color:white;">Support</a></li>
+          <li><a href="download.html" class="nav-link">Download</a></li>
+          <li class="nav-divider"></li>
+          <li><a href="#" class="nav-link">Sign Up</a></li>
+          <li><a href="#" class="btn btn-primary btn-sm">Log In</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+      <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <ul>
+          <li><a href="premium.html" class="mobile-link">Premium</a></li>
+          <li><a href="support.html" class="mobile-link">Support</a></li>
+          <li><a href="download.html" class="mobile-link">Download</a></li>
+          <li><a href="#" class="mobile-link">Sign Up</a></li>
+          <li><a href="#" class="btn btn-primary btn-full">Log In</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <p class="section-eyebrow fade-up">Help Center</p>
+          <h1 class="page-hero-title fade-up delay-1">How can we <span class="text-green">help?</span></h1>
+          <div class="search-box fade-up delay-2">
+            <input type="search" class="search-input" placeholder="Search for help topics..." aria-label="Search support" />
+            <button class="btn btn-primary btn-md" aria-label="Search">Search</button>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="help-cards fade-up">
+            <div class="help-card">
+              <div class="help-icon">🎵</div>
+              <h3>Account & Billing</h3>
+              <p>Manage your account, update payment info, and handle subscriptions.</p>
+            </div>
+            <div class="help-card">
+              <div class="help-icon">📱</div>
+              <h3>Apps & Devices</h3>
+              <p>Get help with Soundwave across all your devices and platforms.</p>
+            </div>
+            <div class="help-card">
+              <div class="help-icon">🎧</div>
+              <h3>Listening & Playback</h3>
+              <p>Troubleshoot playback issues, audio quality, and downloads.</p>
+            </div>
+          </div>
+
+          <div class="section-header fade-up">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+          </div>
+
+          <div class="faq-list" role="list">
+            <div class="faq-item fade-up delay-1" role="listitem">
+              <button class="faq-question" aria-expanded="false">
+                How do I cancel my Premium subscription?
+                <span class="faq-toggle" aria-hidden="true">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>You can cancel anytime from your Account settings. Go to Settings → Account → Subscription and click "Cancel Premium". Your benefits continue until the end of the billing period.</p>
+              </div>
+            </div>
+
+            <div class="faq-item fade-up delay-2" role="listitem">
+              <button class="faq-question" aria-expanded="false">
+                Why is my music not downloading for offline use?
+                <span class="faq-toggle" aria-hidden="true">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Offline downloads require a Premium subscription and sufficient storage space. Make sure you're connected to Wi-Fi, have the latest app version, and that Offline mode is toggled on in your settings.</p>
+              </div>
+            </div>
+
+            <div class="faq-item fade-up delay-3" role="listitem">
+              <button class="faq-question" aria-expanded="false">
+                How do I reset my password?
+                <span class="faq-toggle" aria-hidden="true">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Visit the login page and click "Forgot Password". Enter your email address and we'll send you a link to reset your password within a few minutes.</p>
+              </div>
+            </div>
+
+            <div class="faq-item fade-up delay-1" role="listitem">
+              <button class="faq-question" aria-expanded="false">
+                Can I use Soundwave on multiple devices?
+                <span class="faq-toggle" aria-hidden="true">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Yes! You can install Soundwave on unlimited devices. With Premium, you can listen on one device at a time. Upgrade to Family or Duo for simultaneous playback.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-bottom" style="border-top:none; padding-top:0;">
+          <p class="footer-copy">&copy; 2024 Soundwave. <a href="../index.html" style="color:var(--color-green);">Back to Home</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/navbar.js"></script>
+    <script src="../js/animations.js"></script>
+    <script>
+      // FAQ Accordion
+      document.querySelectorAll('.faq-question').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          const item = btn.closest('.faq-item');
+          const isOpen = item.classList.toggle('open');
+          btn.setAttribute('aria-expanded', isOpen);
+        });
+      });
+    </script>
+  </body>
+</html>

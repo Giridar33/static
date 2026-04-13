@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Soundwave Premium — Ad-free, offline, unlimited skips." />
+    <title>Premium – Soundwave</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/variables.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/animations.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+    <style>
+      .page-hero {
+        padding-top: calc(var(--navbar-height) + var(--space-4xl));
+        padding-bottom: var(--space-4xl);
+        text-align: center;
+        background: linear-gradient(180deg, #0d1f12 0%, var(--color-bg-primary) 100%);
+      }
+      .page-hero-title {
+        font-family: var(--font-display);
+        font-size: clamp(2rem, 6vw, 4rem);
+        font-weight: 900;
+        margin-bottom: var(--space-lg);
+      }
+      .page-hero-sub {
+        color: var(--color-text-secondary);
+        font-size: 1.1rem;
+        max-width: 500px;
+        margin-inline: auto;
+        margin-bottom: var(--space-2xl);
+      }
+      .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: var(--space-3xl);
+        font-size: 0.9rem;
+      }
+      .comparison-table th {
+        font-family: var(--font-display);
+        font-weight: 700;
+        padding: var(--space-md) var(--space-lg);
+        border-bottom: 2px solid var(--color-green);
+        text-align: left;
+      }
+      .comparison-table th:not(:first-child) { text-align: center; }
+      .comparison-table td {
+        padding: var(--space-md) var(--space-lg);
+        border-bottom: 1px solid var(--color-border);
+        color: var(--color-text-secondary);
+      }
+      .comparison-table td:not(:first-child) { text-align: center; }
+      .comparison-table tr:hover td { background: var(--color-bg-elevated); }
+      .check { color: var(--color-green); font-size: 1.2rem; }
+      .cross { color: var(--color-text-muted); }
+    </style>
+  </head>
+  <body>
+
+    <header class="navbar" id="navbar">
+      <nav class="nav-container">
+        <a href="../index.html" class="nav-logo">
+          <svg class="logo-icon" viewBox="0 0 32 32" fill="none">
+            <circle cx="16" cy="16" r="16" fill="#1DB954"/>
+            <rect x="9" y="11" width="3" height="10" rx="1.5" fill="white"/>
+            <rect x="14.5" y="8" width="3" height="16" rx="1.5" fill="white"/>
+            <rect x="20" y="13" width="3" height="8" rx="1.5" fill="white"/>
+          </svg>
+          <span class="logo-text">Soundwave</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="premium.html" class="nav-link" style="color:white;">Premium</a></li>
+          <li><a href="support.html" class="nav-link">Support</a></li>
+          <li><a href="download.html" class="nav-link">Download</a></li>
+          <li class="nav-divider"></li>
+          <li><a href="#" class="nav-link">Sign Up</a></li>
+          <li><a href="#" class="btn btn-primary btn-sm">Log In</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+      <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <ul>
+          <li><a href="premium.html" class="mobile-link">Premium</a></li>
+          <li><a href="support.html" class="mobile-link">Support</a></li>
+          <li><a href="download.html" class="mobile-link">Download</a></li>
+          <li><a href="#" class="mobile-link">Sign Up</a></li>
+          <li><a href="#" class="btn btn-primary btn-full">Log In</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <p class="section-eyebrow fade-up">Soundwave Premium</p>
+          <h1 class="page-hero-title fade-up delay-1">
+            Go <span class="text-green">Premium</span>.<br/>Unlimited freedom.
+          </h1>
+          <p class="page-hero-sub fade-up delay-2">No ads. Download music. Unlimited skips. Crystal clear audio.</p>
+          <a href="#" class="btn btn-primary btn-lg fade-up delay-3">Try 1 Month Free</a>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="section-header fade-up">
+            <h2 class="section-title">Free vs Premium</h2>
+          </div>
+          <div class="fade-up delay-1">
+            <table class="comparison-table" role="table" aria-label="Feature comparison between Free and Premium plans">
+              <thead>
+                <tr>
+                  <th scope="col">Feature</th>
+                  <th scope="col">Free</th>
+                  <th scope="col" style="color:var(--color-green);">Premium</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Access to 100M+ songs</td>
+                  <td><span class="check">✓</span></td>
+                  <td><span class="check">✓</span></td>
+                </tr>
+                <tr>
+                  <td>Shuffle play</td>
+                  <td><span class="check">✓</span></td>
+                  <td><span class="check">✓</span></td>
+                </tr>
+                <tr>
+                  <td>Ad-free music</td>
+                  <td><span class="cross">✗</span></td>
+                  <td><span class="check">✓</span></td>
+                </tr>
+                <tr>
+                  <td>Offline downloads</td>
+                  <td><span class="cross">✗</span></td>
+                  <td><span class="check">✓</span></td>
+                </tr>
+                <tr>
+                  <td>Unlimited skips</td>
+                  <td><span class="cross">✗</span></td>
+                  <td><span class="check">✓</span></td>
+                </tr>
+                <tr>
+                  <td>Play any song on demand</td>
+                  <td><span class="cross">✗</span></td>
+                  <td><span class="check">✓</span></td>
+                </tr>
+                <tr>
+                  <td>High-quality audio (320 kbps)</td>
+                  <td><span class="cross">✗</span></td>
+                  <td><span class="check">✓</span></td>
+                </tr>
+                <tr>
+                  <td>Group Session</td>
+                  <td><span class="cross">✗</span></td>
+                  <td><span class="check">✓</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div style="text-align:center; margin-top: var(--space-3xl);">
+            <a href="#" class="btn btn-primary btn-lg fade-up">Get Premium – $9.99/mo</a>
+            <p style="margin-top:var(--space-md); color:var(--color-text-muted); font-size:0.85rem;">Cancel anytime. No hidden fees.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-bottom" style="border-top:none; padding-top:0;">
+          <p class="footer-copy">&copy; 2024 Soundwave. <a href="../index.html" style="color:var(--color-green);">Back to Home</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/navbar.js"></script>
+    <script src="../js/animations.js"></script>
+  </body>
+</html>
